@@ -18,6 +18,11 @@ public static void main(String[] args) {
         map.put(5, "San Jose");
         map.put(6, "Seattle");
 
+    System.out.println("The values inside the following map are:");
+        for(HashMap.Entry<Integer, String> entry : map.entrySet()){
+            System.out.println(entry.getValue());
+        }
+
 
 
     }
