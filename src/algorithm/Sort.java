@@ -128,20 +128,74 @@ public class Sort {
         final long startTime = System.currentTimeMillis();
         int [] list = array;
         //implement here
-
-        
-        
-
+        if (low > high){
+            int next = partition(array, low, high);
+            quickSort(array, low, next - 1);
+            quickSort(array, next -1, low);
+        }
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
         return list;
+    }
+
+    public int partition(int [] array, int a, int b){
+        int part = a -1;
+        int pivot = array[b];
+        for (int c = a; c <= b; c++){
+            if (array[c] <= pivot){
+                part++;
+                if (part != c){
+                    array[part] = array[part] ^ array[c];
+                    array[c] = array[part] ^ array[c];
+                    array[part] = array[part] ^ array[c];
+                }
+            }
+        }
+        return part;
     }
     
     public int [] heapSort(int [] array){
+        final long  startTime = System.currentTimeMillis();
         int [] list = array;
         //implement here
-        
-        
-
+        buildHeap(array);
+        for (int a = array.length - 1; a >= 1; a--){
+            int temp = array[0];
+            array[0] = array[a];
+            array[a] = temp;
+            heapify(array, a, 0);
+        }
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
         return list;
+    }
+    public void buildHeap(int [] array){
+        for (int a = array.length /2 - 1; a>= 0; a--){
+            heapify(array, array.length, a);
+        }
+    }
+    public void heapify(int[] array, int a, int b){
+        int max = b;
+        int child = 2 * b + 1;
+        if(child < a){
+            if(array[child] > array[max]){
+                max = child;
+            }
+            if (child + 1 < a) {
+                if (array[child + 1] > array[max]) {
+                    max = child + 1;
+                }
+            }
+            if (max != b) {
+                int temp = array[b];
+                array[b] = array[max];
+                array[max] = temp;
+                heapify(array, a, max);
+            }
+        }
+
     }
 
 

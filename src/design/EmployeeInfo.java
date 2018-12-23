@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo extends Abstract implements Employee{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -20,7 +20,17 @@ public class EmployeeInfo {
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
-	static String companyName;
+	private static String companyName;
+	private int employeeId;
+	private int employeeAge;
+	private String name;
+	public int salary;
+	private int performance;
+	private int address;
+
+
+
+
 	
 	/*
 	 * You must implement the logic for below 2 methods and 
@@ -33,11 +43,18 @@ public class EmployeeInfo {
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
-		
+		this.employeeId = employeeId;
 	}
     public EmployeeInfo(String name, int employeeId){
-		
+	    this.name = name;
+	    this.employeeId = employeeId;
 	}
+	public EmployeeInfo(String name, int employeeId, int employeeAge){
+	    this.name = name;
+	    this.employeeId = employeeId;
+	    this.employeeAge = employeeAge;
+
+    }
 	
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
@@ -73,6 +90,9 @@ public class EmployeeInfo {
 
 		return total;
 	}
+
+
+
 	private static class DateConversion {
 
 		public DateConversion(Months months){}
