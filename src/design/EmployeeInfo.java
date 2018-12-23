@@ -37,6 +37,12 @@ public class EmployeeInfo extends Abstract implements Employee{
 	 * following 2 methods are prototype as well for other methods need to be design,
 	 * as you will come up with the new ideas.
 	 */
+    public String getCompanyName(){
+        return companyName;
+    }
+    public void setCompanyName(String companyName){
+        this.companyName = companyName;
+    }
 	
 	/*
 	 * you must have multiple constructor.
@@ -49,11 +55,11 @@ public class EmployeeInfo extends Abstract implements Employee{
 	    this.name = name;
 	    this.employeeId = employeeId;
 	}
-	public EmployeeInfo(String name, int employeeId, int employeeAge){
+	public EmployeeInfo(String name, int employeeId, int employeeAge, int address){
 	    this.name = name;
 	    this.employeeId = employeeId;
 	    this.employeeAge = employeeAge;
-
+        this.address = address;
     }
 	
 	/*
@@ -64,9 +70,26 @@ public class EmployeeInfo extends Abstract implements Employee{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
-		int total=0;
-		return total;
+	public static double calculateEmployeeBonus(int numberOfYearsWithCompany){
+	    double salary = 0;
+        double totalBonus = 0;
+	    String performance = "Great performance for the year";
+	    String okPerformance = "year was ok for him";
+	    double greatPerformanceBonus = .1;
+	    double averagePerformanceBonus = .08;
+
+        System.out.println("Employees only get bonuses after 2 years of work with the company. ");
+
+	    if (numberOfYearsWithCompany >= 2 && performance == "Great performance for the year"){
+	        totalBonus = salary * greatPerformanceBonus;
+        }
+        else if (numberOfYearsWithCompany >= 2 && performance == okPerformance){
+            totalBonus = salary * averagePerformanceBonus;
+        }else{
+            System.out.println("Have not worked long enough and or has poor performance, Therefore no bonus. ");
+        }
+
+		return totalBonus;
 	}
 	
 	/*
