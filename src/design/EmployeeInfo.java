@@ -74,7 +74,7 @@ public class EmployeeInfo extends Abstract implements Employee{
 	    double salary = 0;
         double totalBonus = 0;
 	    String performance = "Great performance for the year";
-	    String okPerformance = "year was ok for him";
+	    String okPerformance = "year was ok for employee";
 	    double greatPerformanceBonus = .1;
 	    double averagePerformanceBonus = .08;
 
@@ -86,7 +86,7 @@ public class EmployeeInfo extends Abstract implements Employee{
         else if (numberOfYearsWithCompany >= 2 && performance == okPerformance){
             totalBonus = salary * averagePerformanceBonus;
         }else{
-            System.out.println("Have not worked long enough and or has poor performance, Therefore no bonus. ");
+            System.out.println( "Have not worked long enough and or had poor performance, Therefore no bonus. ");
         }
 
 		return totalBonus;
@@ -98,8 +98,8 @@ public class EmployeeInfo extends Abstract implements Employee{
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 * 
 	 */
-	public static int calculateEmployeePension(){
-		int total=0;
+	public static double calculateEmployeePension(int salary){
+		double totalPension=0;
 		Scanner sc  = new Scanner(System.in);
 		System.out.println("Please enter start date in format (example: May,2015): ");
 		String joiningDate = sc.nextLine();
@@ -109,9 +109,23 @@ public class EmployeeInfo extends Abstract implements Employee{
         String convertedTodaysDate = DateConversion.convertDate(todaysDate);
 
         //implement numbers of year from above two dates
-		//Calculate pension
+        String startYear = convertedJoiningDate.substring(convertedJoiningDate.length() - 4);
+        String currentYear = convertedTodaysDate.substring(convertedTodaysDate.length() - 4);
+        int start = Integer.parseInt(startYear);
+        int current = Integer.parseInt(currentYear);
+		//Calculate pension  // calculating the years in the company is the difference of currentYear - startYear
+        if ((current - start) == 1){
+            totalPension = salary * .05;
+        }
+        else if ((current - start) >= 2){
+            totalPension = salary * .1;
+        }
+        else if ((current - start) <= 1){
+            totalPension = 0;
+        }
+        System.out.println("PENSION = $ " + totalPension + "monthly");
 
-		return total;
+		return totalPension;
 	}
 
 

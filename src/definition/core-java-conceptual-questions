@@ -1,19 +1,28 @@
 Please answer the below core-java Questions:
 
 What is programing language?
-A.
+
 What jdk contains or composed of and define each components?
 A.
 What is IDE?
-A.
+an IDE is a integrated development environment
 What are the IDEs available in the market to support java?
+intellij, eclipse
 Explain the entire java life cycle.
+editor help you rite a .java code then compiler converts it into a .class code then goes through JVM(java virtual machine)
+then in goes into the console
 what is class?
+the blueprint of an object
 What is object?
+the instance of a class
 What is the entry point of an application?
+the main method
 Why main is static?
+becauce it belongs go that class
 Which class is the superclass of all classes?
+the pafrent class or the class that every other class inherits from
 What is difference between path and classpath variables?
+
 What is the difference between an Interface and Abstract class?
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
 what is Access Specifier?
