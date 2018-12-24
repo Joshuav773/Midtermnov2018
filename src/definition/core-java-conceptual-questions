@@ -24,29 +24,57 @@ the pafrent class or the class that every other class inherits from
 What is difference between path and classpath variables?
 
 What is the difference between an Interface and Abstract class?
+in an interface you can Only declare methods without initialization, while in an abstract class you can initialize non
+abstract methods.
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+you can use an interface by using the implement key word. an abstract class you can use it by using extends key word
 what is Access Specifier?
+it specifies the acces the element has. examole a private element can only be accessed inside that class.
 What is OOP ? Define each feature of java OOP.
+OOP means object oriented programing, and it consists of abstraction, incapsulation, inheritance and polymorphism
 What is Java Package and which package is imported by default?
+java.lang is imported by default and a package is a setspace that organizes a set of related classes and interfaces
 What is API? Name list of API that you have used so far.
+an API is an aplication programing interface and i've used Strign class API, math class API, etc.
 Does java support multiple inheritance, explain why or why not?
+java does not support multiple inheritance because to avoid ambiguity.
 What is method overloading and when it happens?
+method overloading is using the same method with different parameters. used when ypu have different variables as parameters
+using the same action. also used to have code cleanliness.
 Explain exceptions in java and how to handle it.
+exeptions in java are used to help an application run with errors and are handled using a try catch block
 What is static keyword in java? How it has been used in variables and methods ?
+static means that it belongs to that class. theyre used to access them without creating an object
 What is final and how it has been used variables and methods?
+final menas that cant be changed and has a FINAL value. example a final class cant be inherited from, a final method cant
+be overridden and a final variable cant have its value changed.
 What is final, finally and finalize?
+final means it cant be changed, finally is used as finally bloc to close connections and finalize is used to perform
+clean up.
 What is a constructor ?
+a constructor is called when an instance of a class (object) is created
 Can we have multiple constructors in a class?
+yes
 If we don't have a constructor declared, what is called during the object creation?
+the default constructor public ClassName(){}
 What is "this" keyword in java ?
+reference variable in java that is used to refer to an instance variable of an existing class.
 What is "super" keyword in java? How many possible way can you use?
+the super key word is used to access the elements of the "super" class
 What is JVM stand for ?
+java virtual machine
 Is JVM platform independent?
+No
 What version of java are you using?
+1.8
 What is JAR stand for ?
+java archive
 What is the difference between JDK and JVM?
+jvm runs java bytecode. the jdk is what you need to compile java source code.
 What is the difference between JVM and JRE?
+jve is java runtime environment
 What is compile time and run time?
+
 What is heap?
 How java manage it's memory?
 What is the difference between String, StringBuffer and StringBuilder?
@@ -55,6 +83,7 @@ What is Serialization and Deserialization?
 when to use transient variable in java?
 Difference between while and do..while loop?
 What is Enum?
+used to store pre-defined data
 What is Iterator?
 Which one will take more memory, an int or Integer?
 Why is String Immutable in Java?
