@@ -40,7 +40,4 @@ public class FindLowestDifference {
         }
         return result;
     }
-
-
-
 }
