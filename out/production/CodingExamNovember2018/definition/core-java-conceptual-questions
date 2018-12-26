@@ -151,8 +151,11 @@ The difference between Serial and Parallel Garbage Collector?
 
 
 What is JIT stands for?
+a just-in-time (JIT) compiler is a program that turns Java bytecode (a program that contains instructions that must
+be interpreted) into instructions that can be sent directly to the processor.
 
 Explain Java Heap space and Garbage collection?
+
 Can you guarantee the garbage collection process?
 What is the difference between stack and heap in Java?
 What is reflection in java and why is it useful?
