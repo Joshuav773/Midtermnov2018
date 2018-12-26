@@ -42,7 +42,7 @@ public class ConnectToSqlDB {
         return connect;
     }
 
-    public List<String> readDataBase(String tableName, String columnName)throws Exception{
+    public static List<String> readDataBase(String tableName, String columnName)throws Exception{
         List<String> data = new ArrayList<String>();
 
         try {
@@ -58,7 +58,7 @@ public class ConnectToSqlDB {
         return data;
     }
 
-    private void close() {
+    private static void close() {
         try{
             if(resultSet != null){
                 resultSet.close();
@@ -74,7 +74,7 @@ public class ConnectToSqlDB {
         }
     }
 
-    private List<String> getResultSetData(ResultSet resultSet2, String columnName) throws SQLException {
+    private static List<String> getResultSetData(ResultSet resultSet2, String columnName) throws SQLException {
         List<String> dataList = new ArrayList<String>();
         while(resultSet.next()){
             String itemName = resultSet.getString(columnName);
@@ -83,13 +83,13 @@ public class ConnectToSqlDB {
         return dataList;
     }
 
-    public void insertDataFromArrayToSqlTable(int [] ArrayData, String tableName, String columnName)
+    public static void insertDataFromArrayToSqlTable(int[] ArrayData, String tableName, String columnName)
     {
         try {
             connectToSqlDatabase();
             ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
             ps.executeUpdate();
-            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`SortingNumbers` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
+            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`"+columnName+"` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
             ps.executeUpdate();
             for(int n=0; n<ArrayData.length; n++){
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
@@ -160,16 +160,31 @@ public class ConnectToSqlDB {
             e.printStackTrace();
         }
     }
+    public void createTableFromStringToMySql(String tableName, String columnName1, String columnName2) {
+        try {
+            connectToSqlDatabase();
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `" + tableName + "`;");
+            ps.executeUpdate();
+            ps = connect.prepareStatement("CREATE TABLE `" + tableName + "` (`ID` int(11) NOT NULL AUTO_INCREMENT,`" + columnName1 + "` varchar(2500) DEFAULT NULL,`" + columnName2 + "` varchar(2500) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
+            ps.executeUpdate();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
+    }
 
     public void insertProfileToSqlTable(String tableName, String columnName1, String columnName2)
     {
         try {
             connectToSqlDatabase();
-                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
-                ps.setString(1,"Ankita Sing");
-                ps.setInt(2,3590);
-                ps.executeUpdate();
+            ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
+            ps.setString(1,"Sufi Alam");
+            ps.setInt(2,3590);
+            ps.executeUpdate();
 
 
         } catch (IOException e) {
@@ -216,4 +231,17 @@ public class ConnectToSqlDB {
             System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
         }
     }
+
+    public void insertDataFromStringToSqlTable(String array_list, String listElement) {
+
+    }
+
+    public void insertDataFromArrayListToSqlTable(List<String> list1, String use_map, String mapKey, String mapValue) {
+    }
+
+    public List<String> readDataBase(String use_map, String mapKey, String mapValue) {
+
+        return null;
+    }
+
 }

@@ -13,6 +13,17 @@ public class MakePyramid {
                          * * * * * *
 
         */
+        int size = 50;
+        for (int a = 0; a < size; a++){
+            for (int b = 1; b < size - a; b++){
+                System.out.print(" ");
+            }
+            for (int c = 0; c <= a; c++){
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+
 
 
         }

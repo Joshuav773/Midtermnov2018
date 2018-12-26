@@ -8,6 +8,19 @@ public class Pattern {
 		 *
 		 *
 		 */
+    int [] array = new int[40];
+    int count = 1, a = 0;
+    int num = 100;
+
+    while (num > 0){
+        for(int b = 0; b< 10; b++){
+            System.out.println(num);
+            array[a] = num;
+            num -= count;
+            a++;
+        }
+        count++;
+    }
 		
 
 
