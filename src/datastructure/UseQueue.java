@@ -31,6 +31,7 @@ public class UseQueue {
 
         System.out.println("I want to peek into queue and the value is = " + queue.peek());
 
+
 	}
 
 }

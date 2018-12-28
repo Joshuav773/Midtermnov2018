@@ -1,37 +1,113 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-A.
+so that organizing data and sorting could be efficiently done
+
 What are the various operations that can be performed on different Data Structures?
+searching, traversing, deleting, inserting, sorting and merging
+
 List out the areas in which data structures are applied extensively?
+Compiler Design, Operating System, Simulation, Graphics, Numerical Analysis, Database
+management system, Statistical Analysis Package
+
 what is an Array?
+a container object, used to store a fixed amount of data of the same type.
+
 what is the difference between the Array and ArrayList?
+an array must be a fixed quantity of elements when declared while an ArrayList can dynamically grow
+
 what is LinkedList?
+a linear data structure where each element is a separate object.
+
 How is an Array different from Linked List?
+in an array there's no connection between elements, while in a linked list the address of the element is
+stored in the linked part of the previous one.
+
 what is queue?
+data structure in which data is stored as is inserted
 what is stack?
+data structure in which the data is stored stacked on one another
 what is FIFO and LIFO?
+FIFO is first in first out(queue), and LIFO is last in first out(stack)
+
 what is the order of complexity?
+when the code is optimized for speed
+
 what is the best case to search an element from an array?
+when that element is the first one
+
 what is the worst case to search an element from an array?
+when you have to get the last element
+
 what is tree in data structure?
+A tree is a widely used abstract data type that simulates a hierarchical tree structure,
+with a root value and subtrees of children with a parent node, represented as set of linked nodes.
+
 what is graph in data structure?
+object consisting of a vertex set and a edge set
+
 what is the difference between the HashTable and HashMap?
+HashTable is used to retain keys and values pair and a HashMap accepts the key and value pair
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+for RDBMS array, for Network a graph, and for Hierarchical a tree
+
 How HashMap works in java?
+used to assing values to keys
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+when trying to check an index that's <0 or that is >array's length
+
 What are the different ways of copying an array into another array?
+there are 4 of them
+manually
+Array.copyOf();
+System.arrayCopy();
+Object.clone();
+
 What is difference between an array and a linked list?
+that in an array there's no connection between elements
+
 What is DFS and BFS?
+DFS: Depth First Search; BFS: Breadth First Search
+
 What is Recursion?
+when a method calls itself
+
 What are linear and non linear data Structures?
+linear is when the data is arranged in a sequence manner while a non-linear is arranged randomly
+
 What is Big-(O)-notation?
+describes the complexity or runtime of an algorithm
+
 Outlined different kind of sorting algorithm with time complexity?
+QuickSort: Best(O(n log(n)); Average(O(nlog(n));worst(O(N^2)
+InsertionSort: Best(O(n));Average(O(n^2));worst(O(n^2))
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
   b)In terms of Inserting element.
   c)In terms of Searching element.
   d)In terms of Removing element.
+
+                              Common Data Structure Operations
+  Data Structure	    Time Complexity
+                      Average	                                        Worst
+                      Access	    Search	    Insertion	Deletion	Access	    Search	    Insertion	Deletion
+Array	            Θ(1)	    Θ(n)	    Θ(n)	    Θ(n)	    O(1)	    O(n)	    O(n)	    O(n)
+Stack	            Θ(n)	    Θ(n)	    Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+Queue	            Θ(n)	    Θ(n)	    Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+Singly-Linked List	Θ(n)	    Θ(n)	    Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+Doubly-Linked List	Θ(n)	    Θ(n)	    Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+Skip List	        Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(n)	    O(n)	    O(n)	    O(n)
+Hash Table	        N/A	        Θ(1)	    Θ(1)	    Θ(1)	    N/A	        O(n)	    O(n)	    O(n)
+Binary Search Tree	Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(n)	    O(n)	    O(n)	    O(n)
+Cartesian Tree	    N/A	        Θ(log(n))	Θ(log(n))	Θ(log(n))	N/A	        O(n)	    O(n)	    O(n)
+B-Tree	            Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(log(n))	O(log(n))	O(log(n))	O(log(n))
+Red-Black Tree	    Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(log(n))	O(log(n))	O(log(n))	O(log(n))
+Splay Tree	        N/A	        Θ(log(n))	Θ(log(n))	Θ(log(n))	N/A	        O(log(n))	O(log(n))	O(log(n))
+AVL Tree	        Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(log(n))	O(log(n))	O(log(n))	O(log(n))
+KD Tree 	        Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(n)	    O(n)	    O(n)	    O(n)
+
 
 
