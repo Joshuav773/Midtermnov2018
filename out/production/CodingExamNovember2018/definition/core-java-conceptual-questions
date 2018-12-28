@@ -155,11 +155,21 @@ a just-in-time (JIT) compiler is a program that turns Java bytecode (a program t
 be interpreted) into instructions that can be sent directly to the processor.
 
 Explain Java Heap space and Garbage collection?
+Java Heap space is divided into three regions for sake of garbage collection called New Generation, Old or tenured Generation or Perm Space
+The garbage collector is a program which runs on the JVM which gets rid of objects which are not being used by a Java application anymore
 
 Can you guarantee the garbage collection process?
+no
+
 What is the difference between stack and heap in Java?
+stack is used to store static memory while heap is used to store dynamic memory
+
 What is reflection in java and why is it useful?
+is used to describe a code that can inspect other codes in the same system. is useful because it helps the user gain
+insight and see how to move forward
+
 what is multithreading in java?
+execute multiple threads simultaneously
 
 What is the use of synchronization in Java?
 Image result for What is the use of synchronization in Java?
@@ -173,16 +183,17 @@ user-written code, thus providing application-specific software
 
 code we use
 What are the testing Framework available in java?
-testNG and JUnit
+Selenium, cucumber, Db Unit, testNG and JUnit
 
 Difference between jUnit and testNG?
-theyre both used for Unit Testing but testNg has a few more functionalities that makes it better
+main difference is the scope and dependencies
 
 What are the dependencies for this project?
-gson, json, mongo, mysql, testNG
+all of the .JAr files inside the lib directory that have been applied to the project
 
 what is dependency injection in java?
-A framework class, usually called the dependency container, could analyze the dependencies of this class. With this analysis it is able to create an instance of the class and inject the objects into the defined dependencies,
+A framework class, usually called the dependency container, could analyze the dependencies of this class.
+With this analysis it is able to create an instance of the class and inject the objects into the defined dependencies,
 via Java reflection. ... If dependency injection is used, a Java class can be tested in isolation.
 
 What is static binding and dynamic binding?
